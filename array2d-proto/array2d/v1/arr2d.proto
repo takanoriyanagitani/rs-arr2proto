@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package array2d.v1;
+
+import "google/protobuf/struct.proto";
+
+message Meta {
+  google.protobuf.Struct raw = 1;
+  fixed64 width = 2;
+  fixed64 height = 3;
+}
+
+message Float32 {
+  Meta meta = 1;
+  repeated float data = 2;
+}
+
+message Float64 {
+  Meta meta = 1;
+  repeated double data = 2;
+}
